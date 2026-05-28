@@ -23,7 +23,7 @@ public class Hareket : MonoBehaviour
         {
             animator.SetBool("isMoving", true);
 
-            Quaternion targetRotation = Quaternion.LookRotation(moveVector);
+            Quaternion targetRotation = Quaternion.LookRotation(-moveVector);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
         }
         else
